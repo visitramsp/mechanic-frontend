@@ -1,0 +1,21 @@
+export const API_URLs = {
+  auth: {
+    register: "/auth/register",
+    login: "/auth/login",
+    logout: "/auth/logout",
+    me: "/auth/me",
+  },
+  dashboard: "/dashboard",
+  customers: "/customer",
+  vehicles: "/vehicle",
+  estimates: "/estimate",
+  jobSheets: "/jobSheets",
+  invoices: "/invoices",
+  settings: "/settings",
+  users: "/users",
+  contactEnquiries: "/contact-enquiries",
+  contact: "/contact",
+  dvlaSearch: "/dvla/search",
+  vehicleLookup: "/save-vehicle",
+  dvlaHistory: "/dvla/history",
+};

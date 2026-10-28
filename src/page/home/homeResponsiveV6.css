@@ -1,0 +1,104 @@
+/* Stable, device-first landing page layout */
+.pw-home-page *, .pw-home-page *::before, .pw-home-page *::after { box-sizing:border-box; }
+.pw-home-page main { overflow:clip; }
+.pw-home-shell { width:min(calc(100% - clamp(1.25rem,4vw,3rem)),1280px); }
+.pw-home-section { padding-block:clamp(4.25rem,7vw,7rem); }
+.pw-home-section-heading { max-width:760px; }
+.pw-home-section-heading h2,.pw-home-final-cta h2,.pw-home-fleet__copy h2 { text-wrap:balance; }
+.pw-home-section-heading p,.pw-home-hero__lead,.pw-home-fleet__copy>p { text-wrap:pretty; }
+
+.pw-home-hero { min-height:auto; padding:clamp(7.5rem,11vw,9.4rem) 0 clamp(4.2rem,7vw,6.5rem); }
+.pw-home-hero__inner { grid-template-columns:minmax(0,1.02fr) minmax(380px,.98fr); gap:clamp(2.5rem,5.5vw,5.5rem); }
+.pw-home-hero__copy { min-width:0; }
+.pw-home-hero h1 { max-width:760px; font-size:clamp(3.4rem,6.4vw,6.15rem); line-height:.95; }
+.pw-home-hero__lead { max-width:650px; }
+.pw-home-hero__visual { width:100%; max-width:590px; justify-self:end; }
+.pw-home-hero__image-wrap { min-height:0; aspect-ratio:4 / 4.7; }
+.pw-home-hero__image-wrap img { display:block; min-height:0; height:100%; }
+.pw-home-hero__floating-card--service { left:-1.25rem; bottom:2rem; }
+.pw-home-hero__floating-card--rating { right:-.75rem; bottom:7rem; }
+
+.pw-home-trustbar__grid>div,.pw-home-stat,.pw-home-service-card,.pw-home-plan,.pw-home-process-card,.pw-home-review-card { min-width:0; }
+.pw-home-service-grid { grid-template-columns:repeat(4,minmax(0,1fr)); gap:1rem; }
+.pw-home-service-card { min-height:315px; }
+.pw-home-plan-grid { gap:1.25rem; }
+.pw-home-process__layout,.pw-home-booking__layout,.pw-home-faq__layout { gap:clamp(2.4rem,5vw,5rem); }
+.pw-home-booking-form,.pw-home-fleet__card { overflow:hidden; }
+.pw-home-fleet__copy { min-width:0; }
+.pw-home-faq__list article>button span { min-width:0; overflow-wrap:anywhere; }
+
+@media (max-width:1199px) {
+  .pw-home-hero__inner { grid-template-columns:minmax(0,1fr) minmax(350px,.78fr); gap:2.5rem; }
+  .pw-home-service-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .pw-home-hero__floating-card--service { left:.75rem; }
+  .pw-home-hero__floating-card--rating { right:.75rem; }
+}
+
+@media (max-width:1023px) {
+  .pw-home-hero { padding-top:7.5rem; }
+  .pw-home-hero__inner,.pw-home-process__layout,.pw-home-booking__layout,.pw-home-faq__layout,.pw-home-fleet__card { grid-template-columns:1fr; }
+  .pw-home-hero__copy { max-width:760px; }
+  .pw-home-hero__visual { max-width:760px; justify-self:start; }
+  .pw-home-hero__image-wrap { aspect-ratio:16 / 10; }
+  .pw-home-hero__copy,.pw-home-hero__copy * { text-align:left; }
+  .pw-home-kicker,.pw-home-hero__actions,.pw-home-hero__proof { margin-inline:0; justify-content:flex-start; }
+  .pw-home-hero h1,.pw-home-hero__lead { margin-inline:0; }
+  .pw-home-plan-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .pw-home-plan:last-child { grid-column:1 / -1; width:min(100%,620px); justify-self:center; }
+  .pw-home-plan.is-featured { transform:none; }
+  .pw-home-plan { min-height:0; }
+  .pw-home-review-grid,.pw-home-coverage__cards { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .pw-home-review-grid>div:last-child,.pw-home-coverage__cards>div:last-child { grid-column:1 / -1; }
+  .pw-home-booking__intro,.pw-home-faq__intro { position:static; }
+  .pw-home-fleet__visual { min-height:390px; }
+}
+
+@media (max-width:767px) {
+  .pw-home-shell { width:calc(100% - 1.25rem); }
+  .pw-home-section { padding-block:4rem; }
+  .pw-home-section-heading { margin-bottom:2rem; }
+  .pw-home-section-heading h2,.pw-home-final-cta h2,.pw-home-fleet__copy h2 { font-size:clamp(2rem,10.5vw,3.2rem)!important; line-height:1.04; letter-spacing:-.045em; }
+  .pw-home-hero { padding:6.7rem 0 3.7rem; }
+  .pw-home-hero__inner { gap:2rem; }
+  .pw-home-hero h1 { font-size:clamp(2.55rem,13vw,4.2rem)!important; line-height:.98!important; letter-spacing:-.065em; }
+  .pw-home-hero__lead { margin-top:1.2rem; font-size:.96rem; line-height:1.7; }
+  .pw-home-kicker { max-width:100%; font-size:.62rem; letter-spacing:.09em; line-height:1.35; }
+  .pw-home-hero__actions { display:grid; grid-template-columns:1fr; width:100%; margin-top:1.5rem; }
+  .pw-home-btn { width:100%; min-height:50px; padding-inline:1rem; }
+  .pw-home-hero__proof { display:grid; grid-template-columns:1fr; gap:.65rem; }
+  .pw-home-hero__proof span { align-items:flex-start; }
+  .pw-home-hero__visual { width:100%; }
+  .pw-home-hero__image-wrap { aspect-ratio:4 / 3.15; border-radius:24px; }
+  .pw-home-hero__image-wrap::before { inset:.5rem; border-radius:18px; }
+  .pw-home-hero__image-badge { top:.85rem; right:.85rem; max-width:calc(100% - 1.7rem); padding:.5rem .68rem; font-size:.64rem; }
+  .pw-home-hero__floating-card { position:relative; inset:auto; max-width:none; margin-top:.7rem; box-shadow:0 12px 30px rgba(10,22,40,.1); }
+  .pw-home-hero__floating-card--rating { display:flex; align-items:center; justify-content:space-between; }
+  .pw-home-trustbar__grid,.pw-home-stats__grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .pw-home-service-grid,.pw-home-plan-grid,.pw-home-review-grid,.pw-home-coverage__cards,.pw-home-process__steps,.pw-home-fleet__benefits,.pw-home-form-grid { grid-template-columns:1fr; }
+  .pw-home-plan:last-child,.pw-home-review-grid>div:last-child,.pw-home-coverage__cards>div:last-child { grid-column:auto; width:100%; }
+  .pw-home-service-card,.pw-home-review-card { min-height:0; }
+  .pw-home-services__footer { flex-direction:column; align-items:stretch; }
+  .pw-home-text-btn { justify-content:space-between; }
+  .pw-home-form-grid__wide { grid-column:auto; }
+  .pw-home-booking-form { border-radius:22px; }
+  .pw-home-booking-form__head { align-items:flex-start; }
+  .pw-home-fleet__card { border-radius:23px; }
+  .pw-home-fleet__visual { min-height:auto; display:grid; gap:.75rem; padding:1.25rem; }
+  .pw-home-fleet__icon,.pw-home-fleet__mini { position:relative!important; inset:auto!important; width:100%; }
+  .pw-home-fleet__icon { width:58px; height:58px; }
+  .pw-home-fleet__copy { padding:1.35rem; }
+  .pw-home-fleet__copy .pw-home-btn { width:100%; }
+  .pw-home-final-cta__inner { display:block; text-align:left; }
+  .pw-home-final-cta__actions { display:grid; grid-template-columns:1fr; justify-content:stretch; }
+}
+
+@media (max-width:479px) {
+  .pw-home-shell { width:calc(100% - 1rem); }
+  .pw-home-hero { padding-top:6.35rem; }
+  .pw-home-hero__image-wrap { aspect-ratio:1 / .92; }
+  .pw-home-trustbar__grid>div { min-height:100px; padding:.75rem .45rem; font-size:.66rem; }
+  .pw-home-stat { min-height:122px; }
+  .pw-home-stat strong { font-size:1.8rem; }
+  .pw-home-service-card,.pw-home-plan,.pw-home-process-card,.pw-home-booking-form,.pw-home-review-card { padding:1rem; border-radius:18px; }
+  .pw-home-section-heading>span,.pw-home-eyebrow { font-size:.64rem; letter-spacing:.14em; }
+}
