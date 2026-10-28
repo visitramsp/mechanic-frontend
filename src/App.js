@@ -90,7 +90,7 @@ function App() {
         aria-hidden={showLoader}
       >
       <CssBaseline />
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/find-vehicle" element={<Vehicle />} />
@@ -112,7 +112,7 @@ function App() {
 
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
       </motion.div>
     </ThemeProvider>
   );
