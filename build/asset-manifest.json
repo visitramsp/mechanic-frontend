@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/mechanic-frontend/static/css/main.37803d19.css",
+    "main.css": "/mechanic-frontend/static/css/main.d582e318.css",
     "main.js": "/mechanic-frontend/static/js/main.4ec8f929.js",
     "static/js/239.e39fb35b.chunk.js": "/mechanic-frontend/static/js/239.e39fb35b.chunk.js",
     "static/js/977.97c88509.chunk.js": "/mechanic-frontend/static/js/977.97c88509.chunk.js",
     "static/js/455.c81af333.chunk.js": "/mechanic-frontend/static/js/455.c81af333.chunk.js",
     "index.html": "/mechanic-frontend/index.html",
-    "main.37803d19.css.map": "/mechanic-frontend/static/css/main.37803d19.css.map",
+    "main.d582e318.css.map": "/mechanic-frontend/static/css/main.d582e318.css.map",
     "main.4ec8f929.js.map": "/mechanic-frontend/static/js/main.4ec8f929.js.map",
     "239.e39fb35b.chunk.js.map": "/mechanic-frontend/static/js/239.e39fb35b.chunk.js.map",
     "977.97c88509.chunk.js.map": "/mechanic-frontend/static/js/977.97c88509.chunk.js.map",
     "455.c81af333.chunk.js.map": "/mechanic-frontend/static/js/455.c81af333.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.37803d19.css",
+    "static/css/main.d582e318.css",
     "static/js/main.4ec8f929.js"
   ]
 }

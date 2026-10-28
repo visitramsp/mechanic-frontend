@@ -47,3 +47,36 @@
 @media(prefers-reduced-motion:reduce){.ms-floating-contact a{animation:none}}
 .ms-hero__pause{left:0;right:auto;bottom:4px}.ms-hero__caption{right:14px;bottom:48px}.ms-hero__pause:hover,.ms-hero__pause:focus-visible{color:#fff;background:#9d5017;border-color:#dca06e}
 @media(max-width:650px){.ms-hero__pause{left:18px;right:auto;bottom:0}}
+
+/* Mobile hero: keep the copy, actions and motorcycle in their own flow. */
+@media(max-width:650px){
+  .ms-hero{min-height:0}
+  .ms-hero__inner{display:flex;flex-direction:column;align-items:stretch;min-height:0;padding-top:116px}
+  .ms-hero__copy{padding:0}
+  .ms-hero__copy .ms-label{font-size:9px;letter-spacing:.14em}
+  .ms-hero h1{font-size:clamp(57px,15vw,84px);line-height:.88;margin:22px 0 16px}
+  .ms-hero__copy>p{max-width:340px;font-size:13px;line-height:1.7}
+  .ms-hero__copy .ms-actions{display:flex;flex-wrap:wrap;gap:12px 20px;margin-top:25px}
+  .ms-hero__copy .ms-action{min-height:50px;padding:0 16px;gap:22px}
+  .ms-hero__copy .ms-text-link{min-height:44px;font-size:9px;letter-spacing:.09em}
+  .ms-hero__bike{position:relative;inset:auto;width:100%;height:clamp(250px,74vw,390px);margin:30px 0 12px;display:block}
+  .ms-hero__bike::before{left:0;right:0;top:0;bottom:37px;border-radius:22px;background:linear-gradient(145deg,#eeeae2,#d5cec2);box-shadow:0 18px 40px rgba(0,0,0,.25)}
+  .ms-hero__orbit{left:13%;top:4%;width:74%;box-shadow:none}
+  .ms-hero__ghost{display:none}
+  .ms-hero__bike .ms-hero__slide{left:2%;top:calc((100% - 37px) / 2);width:96%;height:calc(100% - 56px);visibility:hidden;opacity:0;transform:translateY(-50%);transition:opacity .5s ease,visibility 0s}
+  .ms-hero__bike .ms-hero__slide.is-active{visibility:visible;opacity:1;transform:translateY(-50%);transition:opacity .5s ease,visibility 0s}
+  .ms-hero__pause{left:0;bottom:0;min-height:32px;padding:0 12px;border-color:#6f685e;background:transparent}
+  .ms-hero__caption{display:flex;right:0;bottom:10px;gap:12px;color:#a69d90;font-size:8px}
+  .ms-hero__caption strong{color:#f8f6f1}
+  .ms-hero__bottom{padding:16px 0;font-size:8px;gap:12px}
+  .ms-hero__bottom span:last-child{display:none}
+  .ms-floating-contact{right:12px;bottom:max(14px,env(safe-area-inset-bottom))}
+  .ms-floating-contact a{width:46px;height:46px}
+}
+@media(max-width:360px){
+  .ms-hero h1{font-size:54px}
+  .ms-hero__copy .ms-actions{gap:8px 14px}
+  .ms-hero__copy .ms-action{gap:14px;font-size:9px}
+  .ms-hero__caption{display:none}
+}
+@media(max-width:650px) and (prefers-reduced-motion:reduce){.ms-hero__bike .ms-hero__slide,.ms-hero__bike .ms-hero__slide.is-active{transition:none}}
