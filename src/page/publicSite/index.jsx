@@ -18,7 +18,7 @@ const services = [
 ];
 
 function Footer() {
-  return <footer className="ms-footer"><div className="ms-wrap ms-footer__main"><div><Link to="/" className="ms-footer__logo"><img src="/the-mechnic-logo.png" alt="the Mechanic" /></Link><p>For the machines you love and the roads ahead. Thoughtful service and repair for every ride.</p></div><div><span className="ms-label">EXPLORE</span><Link to="/">Home</Link><Link to="/services">Our services</Link><Link to="/find-vehicle">Bike check</Link><Link to="/contact">Contact</Link></div><div><span className="ms-label">THE WORKSHOP</span><p>Bike servicing<br />Diagnostics & repairs<br />Care for the road ahead</p><Link className="ms-footer__link" to="/contact">START AN ENQUIRY <ArrowRight size={15} /></Link></div><div className="ms-footer__statement">KEEP<br /><i>RIDING.</i></div></div><div className="ms-wrap ms-footer__bottom"><span>© {new Date().getFullYear()} THE MECHANIC</span><span>MADE FOR THE RIDE.</span></div></footer>;
+  return <footer className="ms-footer"><div className="ms-wrap ms-footer__main"><div><Link to="/" className="ms-footer__logo"><img src={`${process.env.PUBLIC_URL}/the-mechnic-logo.png`} alt="the Mechanic" /></Link><p>For the machines you love and the roads ahead. Thoughtful service and repair for every ride.</p></div><div><span className="ms-label">EXPLORE</span><Link to="/">Home</Link><Link to="/services">Our services</Link><Link to="/find-vehicle">Bike check</Link><Link to="/contact">Contact</Link></div><div><span className="ms-label">THE WORKSHOP</span><p>Bike servicing<br />Diagnostics & repairs<br />Care for the road ahead</p><Link className="ms-footer__link" to="/contact">START AN ENQUIRY <ArrowRight size={15} /></Link></div><div className="ms-footer__statement">KEEP<br /><i>RIDING.</i></div></div><div className="ms-wrap ms-footer__bottom"><span>© {new Date().getFullYear()} THE MECHANIC</span><span>MADE FOR THE RIDE.</span></div></footer>;
 }
 
 function FloatingContact() { return <div className="ms-floating-contact" aria-label="Contact the workshop"><a className="ms-floating-contact__call" href="tel:+919089786756" aria-label="Call the workshop"><Phone size={21} /><span>CALL US</span></a><a className="ms-floating-contact__whatsapp" href="https://wa.me/919089786756" target="_blank" rel="noopener noreferrer" aria-label="Chat with the workshop on WhatsApp"><FaWhatsapp size={24} /><span>WHATSAPP</span></a></div>; }
@@ -29,11 +29,11 @@ function ServiceCards({ limit }) { return <div className="ms-service-grid">{serv
 function ArrowUpRightIcon() { return <ArrowRight size={18} />; }
 
 const heroBikes = [
-  { src: "/the-mechnic-hero-bike.png", alt: "Green sport motorcycle" },
-  { src: "/hero-bike-cafe.png", alt: "Classic café racer motorcycle" },
-  { src: "/hero-bike-super.png", alt: "Black and green road motorcycle" },
-  { src: "/hero-bike-roadster.webp", alt: "Roadster motorcycle" },
-  { src: "/hero-bike-classic.webp", alt: "Classic motorcycle" },
+  { src: `${process.env.PUBLIC_URL}/the-mechnic-hero-bike.png`, alt: "Green sport motorcycle" },
+  { src: `${process.env.PUBLIC_URL}/hero-bike-cafe.png`, alt: "Classic café racer motorcycle" },
+  { src: `${process.env.PUBLIC_URL}/hero-bike-super.png`, alt: "Black and green road motorcycle" },
+  { src: `${process.env.PUBLIC_URL}/hero-bike-roadster.webp`, alt: "Roadster motorcycle" },
+  { src: `${process.env.PUBLIC_URL}/hero-bike-classic.webp`, alt: "Classic motorcycle" },
 ];
 
 function HeroBikes() {

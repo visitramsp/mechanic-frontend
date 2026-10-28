@@ -2,7 +2,7 @@ import React from "react";
 
 const BrandLogo = ({ compact = false, className = "" }) => (
   <div className={`tm-brand ${compact ? "tm-brand--compact" : ""} ${className}`}>
-    <img src="/the-mechnic-logo.png" alt="the Mechanic" />
+    <img src={`${process.env.PUBLIC_URL}/the-mechnic-logo.png`} alt="the Mechanic" />
     {/* {!compact && (
       <span>
         <strong>the</strong>
